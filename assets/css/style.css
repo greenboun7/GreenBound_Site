@@ -194,6 +194,10 @@ box-shadow:         1px 0px 11px 0px rgba(50, 50, 50, 0.54);
   #header .logo {
     font-size: 28px;
   }
+  #hero h1, #hero h2{
+    text-align: center;
+  }
+   
 }
 
 /*--------------------------------------------------------------
