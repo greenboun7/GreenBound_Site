@@ -345,13 +345,13 @@ box-shadow:         1px 0px 11px 0px rgba(50, 50, 50, 0.54);
   }
 }
 
-.
+
 
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
   right: 15px;
-  top: 22px;
+  top: 18px;
   z-index: 9998;
   border: 0;
   background: none;
@@ -483,14 +483,14 @@ box-shadow:         1px 0px 11px 0px rgba(50, 50, 50, 0.54);
 }
 
 #hero h1 span.blue {
-color: #04A8F5; 
+color: #3265c1; 
 }
 #hero h1 span.green {
   color: #00730B; 
   }
 
 #hero h2 {
-  color: #2c4964;
+  color: #000;
   margin: 10px 0 0 0;
   font-size: 20px;
 }
@@ -526,7 +526,7 @@ color: #04A8F5;
     height: 100vh;
   }
   #hero .container {
-    padding-bottom: 63px;
+    padding-bottom: 92px;
   }
   #hero h1 {
     font-size: 28px;
