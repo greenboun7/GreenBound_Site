@@ -8,6 +8,24 @@
   <title>:: Greenbound ::</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-200445296-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-200445296-1');
+</script>
+
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"IldRw1ah9W20em", domain:"greenbound.biz",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://certify-js.alexametrics.com/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=IldRw1ah9W20em" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->  
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -30,6 +48,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+
 
 
 </head>
@@ -148,7 +168,7 @@
 
         <div class="section-title">
           <h2>We offering </h2>
-           
+
         </div>
 
         <div class="row">
@@ -407,7 +427,7 @@
 
         <div class="section-title">
           <h2>Management Team</h2>
-          
+
         </div>
 
         <div class="row">
@@ -475,7 +495,7 @@
 
         </div>
 
-        
+
 
       </div>
     </section><!-- End Counts Section -->
@@ -488,51 +508,57 @@
 
         <div class="section-title">
           <h2>Make an Enquiry</h2>
-           
+
         </div>
 
-        <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+        <form name="myform" id="myform" role="form" class="php-email-form">
           <div class="form-row">
             <div class="col-md-4 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
                 data-msg="Please enter at least 4 chars">
-              <div class="validate"></div>
+              <div id="err-name" style="    font-size: 13px;
+                color: red;"></div>
             </div>
             <div class="col-md-4 form-group">
               <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
                 data-rule="email" data-msg="Please enter a valid email">
-              <div class="validate"></div>
+              <div id="err-email" style="    font-size: 13px;
+                color: red;"></div>
             </div>
             <div class="col-md-4 form-group">
               <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone"
                 data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-              <div class="validate"></div>
+              <div id="err-phone" style="    font-size: 13px;
+                color: red;"></div>
             </div>
           </div>
           <div class="form-row">
 
             <div class="col-md-4 form-group">
-              <select name="department" id="department" class="form-control">
+              <select name="service" id="service" class="form-control">
                 <option value="">Select Services</option>
-                <option value="Department 1">Service 1</option>
-                <option value="Department 2">Service 2</option>
-                <option value="Department 3">Service 3</option>
+                <option value="Service 1">Service 1</option>
+                <option value="Service 2">Service 2</option>
+                <option value="Service 3">Service 3</option>
               </select>
-              <div class="validate"></div>
+              <div id="err-service" style="    font-size: 13px;
+              color: red;"></div>
             </div>
             <div class="col-md-4 form-group">
-              <select name="doctor" id="doctor" class="form-control">
+              <select name="country" id="country" class="form-control">
                 <option value="">Select Country</option>
-                <option value="Doctor 1">Country 1</option>
-                <option value="Doctor 2">Country 2</option>
-                <option value="Doctor 3">Country 3</option>
+                <option value="Country 1">Country 1</option>
+                <option value="Country 2">Country 2</option>
+                <option value="Country 3">Country 3</option>
               </select>
-              <div class="validate"></div>
+              <div id="err-country" style="    font-size: 13px;
+              color: red;"></div>
             </div>
           </div>
 
           <div class="form-group">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+            <textarea class="form-control" id="message" name="message" rows="5"
+              placeholder="Message (Optional)"></textarea>
             <div class="validate"></div>
           </div>
           <div class="mb-3">
@@ -540,7 +566,7 @@
             <div class="error-message"></div>
             <div class="sent-message">Your Enquiry details has been sent successfully. Thank you!</div>
           </div>
-          <div class="text-center"><button type="submit">Make an Enquiry</button></div>
+          <div class="text-center"><button type="button" onclick="validateForm()">Make an Enquiry</button></div>
         </form>
 
       </div>
@@ -725,10 +751,12 @@
                     <p class="font-italic">Blockchain technology enables new ways of organizing economic activities,
                       reduces costs and time associated with intermediaries, and strengthens the trust in an ecosystem
                       of actors. The impact of this seminal technology is reflected by an upcoming research stream and
-                      various firms that examine the potential uses of blockchain technology. <br><br>While there are promising
+                      various firms that examine the potential uses of blockchain technology. <br><br>While there are
+                      promising
                       use cases of this new technology, research and practice are still in their infancy about altering
                       existing and creating new business models. We develop a taxonomy of blockchain business models
-                      based on 99 blockchain ventures to explore the impact of blockchain technology on business models.<br><br>
+                      based on 99 blockchain ventures to explore the impact of blockchain technology on business
+                      models.<br><br>
                       As a result, we identify five archetypal patterns, which enhance our understanding of how
                       blockchain technology affects existing and creates new business models. We propose to use these
                       results to discover further patterns fueled by blockchain technology and illustrate how firms can
@@ -737,7 +765,8 @@
                       <br><br>The further adoption of blockchain technology directly and indirectly impacts individuals,
                       companies, banks, and governments and their financial transactions. The increasing penetration of
                       blockchain technology provides numerous opportunities for data engineering and integration
-                      professionals. <br><br>The application of blockchain contracts for pursuing socio-economic challenges
+                      professionals. <br><br>The application of blockchain contracts for pursuing socio-economic
+                      challenges
                       improves trust and cooperation among globally operating organizations. Financial regulators are
                       also poised to benefit from the implementation of blockchain networks to monitor and detect
                       irregular activity in their markets. In combination with artificial intelligence (AI) and
@@ -768,9 +797,9 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-      <div class="section-title">
-        <h2>Contact</h2>           
-      </div>
+    <div class="section-title">
+      <h2>Contact</h2>
+    </div>
 
     <div class="footer-top">
       <div class="container">
@@ -781,11 +810,11 @@
             <p>
               <strong>Phone:</strong><br> +1 616 691 6110,<br>
               <strong>Email:</strong><br> info@greenbound.biz<br>
-            </p>  
-             
+            </p>
+
           </div>
           <div class="col-lg-4 col-md-6 footer-contact">
-            
+
             <h3>Greenbound - INDIA</h3>
             <p>
               <strong>Phone:</strong><br> +91 9585552999, <br>+91 9585557557, <br>+91 9843115750,<br>+91 8148099989<br>
@@ -804,7 +833,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
           </div>
- 
+
 
         </div>
       </div>
@@ -843,6 +872,102 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    function validateForm() {
+      // $(".loading").slideDown();
+      document.getElementById("err-name").innerHTML = "";
+      document.getElementById("err-email").innerHTML = "";
+      document.getElementById("err-phone").innerHTML = "";
+      document.getElementById("err-service").innerHTML = "";
+      document.getElementById("err-country").innerHTML = "";
+      var status = false;
+      if (document.getElementById("name").value == "") {
+        document.getElementById("err-name").innerHTML = "Please enter name";
+        var status = true;
+      }
+      if (!/^[a-zA-Z]*$/g.test(document.getElementById['name'].value)) {
+        document.getElementById("err-name").innerHTML = "Alphabets only allowed";
+        status = true;
+      }
+      if (document.getElementById("email").value == "") {
+        document.getElementById("err-email").innerHTML = "Please enter email";
+        var status = true;
+      }
+      if (!/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g.test(document.getElementById('email').value)) {
+        document.getElementById("err-email").innerHTML = "Required valid email address";
+        status = true;
+      }
+      if (!/^[0-9]{10}$/g.test(document.getElementById('phone').value)) {
+        document.getElementById("err-phone").innerHTML = "Mobile number should be 10 digits";
+        status = true;
+      }
+      if (document.getElementById("service").value == "") {
+        document.getElementById("err-service").innerHTML = "Please select any one of this list";
+        var status = true;
+      }
+      if (document.getElementById("country").value == "") {
+        document.getElementById("err-country").innerHTML = "Please select any one of this list";
+        var status = true;
+      }
+      if (status) {
+        // $(".loading").slideDown();
+        $('.error-message').slideDown().html('The form validation failed!');
+        return false;
+      }
+
+      if (!status) {
+        $('.error-message').slideUp();
+        $('.loading').slideDown();
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var country = document.getElementById("country").value;
+        var service = document.getElementById("service").value;
+        var message = document.getElementById("message").value;
+        var dataString = 'name=' + name + '&email=' + email + '&phone=' + phone + '&country=' + country + '&service=' + service + '&message=' + message;
+        $.ajax({
+          type: "POST",
+          url: "sendmail.php",
+
+          data: dataString,
+          cache: false,
+          success: function (html) {
+
+            var response = html.replace('[{"id":"', '').replace('"}]', '')
+            if (response == "1") {
+              $('.loading').slideUp();
+              $('.sent-message').slideDown().html("Registered successfully")
+              document.getElementById("name").value = "";
+              document.getElementById("email").value = "";
+              document.getElementById("phone").value = "";
+              document.getElementById("country").value = "";
+              document.getElementById("service").value = "";
+              document.getElementById("message").value = "";
+              setTimeout(function () {
+                $('.sent-message').slideUp();
+              }, 5000);
+
+              return false;
+            } else {
+              $('.error-message').slideDown().html('Failed!');
+              setTimeout(function () {
+                $('.error-message').slideUp();
+              }, 5000);
+            }
+
+
+          }
+        });
+        return false;
+      }
+    }
+
+
+
+
+
+  </script>
 
 </body>
 
