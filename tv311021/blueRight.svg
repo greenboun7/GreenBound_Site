@@ -1,0 +1,28 @@
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="162.26" height="1405.6" viewBox="0 0 162.26 1405.6">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-36.79" y1="0.5" x2="-35.79" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.05" stop-color="#b9752b"/>
+      <stop offset="0.27" stop-color="#f9d877"/>
+      <stop offset="0.34" stop-color="#e0b255"/>
+      <stop offset="0.42" stop-color="#ca9137"/>
+      <stop offset="0.47" stop-color="#c2842b"/>
+      <stop offset="0.54" stop-color="#cd953a"/>
+      <stop offset="0.69" stop-color="#eac163"/>
+      <stop offset="0.75" stop-color="#f9d877"/>
+      <stop offset="0.79" stop-color="#edc568"/>
+      <stop offset="0.88" stop-color="#d19a47"/>
+      <stop offset="0.95" stop-color="#bf7f33"/>
+      <stop offset="0.99" stop-color="#b9752b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-39.08" y1="0.5" x2="-38.08" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#21539c"/>
+      <stop offset="0.3" stop-color="#007dc6"/>
+      <stop offset="0.66" stop-color="#21539c"/>
+      <stop offset="1" stop-color="#007dc6"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1" data-name="Layer 1">
+    <path id="Path_51" data-name="Path 51" d="M22.26,0H0V1405.6H22.26c77,0,140-53,140-117.8V117.8C162.21,53,99.23,0,22.26,0Z" fill="url(#linear-gradient)"/>
+    <path id="Path_52" data-name="Path 52" d="M12.75,40.5H0V1365.09H12.75c77,0,140-53,140-117.79V158.3C152.7,93.51,89.72,40.5,12.75,40.5Z" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>
